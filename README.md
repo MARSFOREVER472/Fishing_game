@@ -1,3 +1,3 @@
 # **_Fishing_game_**
 
-## Proyecto creado desde 0 para pescar peces realizado con Archivos en JavaScript!
+## **_Proyecto creado desde 0 para pescar peces realizado con Archivos en JavaScript!_**
