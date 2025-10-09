@@ -8,7 +8,7 @@
 - **_CSS: The styling for the game's layout._**
 - **_JavaScript: The game logic, which handles drawing, player movement, fish AI, collision detection, and scoring._**
   
-Basic game logic overview
+**_Basic game logic overview:_**
 
 - Initialize the Canvas: Get a reference to the <canvas> element and its 2D context.
 - Handle User Input: Listen for mouse or keyboard events to control the fishing hook.
