@@ -1,11 +1,13 @@
 # **_Fishing_game_**
 
-Building a fishing game in JavaScript is a great way to practice core game development concepts like animation loops, collision detection, and user input. The simplest way to create the visual elements is with the HTML <canvas> element and its 2D rendering context. 
+### **_Building a fishing game in JavaScript is a great way to practice core game development concepts like animation loops, collision detection, and user input. The simplest way to create the visual elements is with the HTML <canvas> element and its 2D rendering context._**
 
 The core components of the game will be:
-HTML: The structure of the game, including the <canvas> element, a score display, and an instruction area.
-CSS: The styling for the game's layout.
-JavaScript: The game logic, which handles drawing, player movement, fish AI, collision detection, and scoring. 
+
+- HTML: The structure of the game, including the <canvas> element, a score display, and an instruction area.
+- CSS: The styling for the game's layout.
+- JavaScript: The game logic, which handles drawing, player movement, fish AI, collision detection, and scoring.
+  
 Basic game logic overview
 Initialize the Canvas: Get a reference to the <canvas> element and its 2D context.
 Handle User Input: Listen for mouse or keyboard events to control the fishing hook.
