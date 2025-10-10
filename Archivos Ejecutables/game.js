@@ -75,3 +75,73 @@ canvas.addEventListener('mouseup', function()
 {
     mouse.hooking = false;
 });
+
+// --- GAME LOOP ---
+
+function animate()
+{
+    // CLEAR CANVAS...
+
+    context.clearRect(0, 0, canvas.width, canvas.height);
+
+    // DRAW WATER LINE...
+
+    context.fillStyle = 'rgba(0, 176, 255, 0.5)';
+    context.fillRect(0, canvas.height * 0.15, canvas.width, canvas.height);
+
+    // SPAWN NEW FISH PERIODICALLY...
+
+    if (gameFrame % 100 === 0 && fishes.length < 10)
+    {
+        fishes.push(new Fish());
+    }
+
+    // UPDATE AND DRAW FISH...
+
+    for (let i = 0; i < fishes.length; i++)
+    {
+        fishes[i].update();
+        fishes[i].draw();
+    }
+
+    // DRAW FISHING HOOK...
+
+    context.strokeStyle = 'white';
+    context.lineWidth = 2;
+    context.beginPath();
+    context.moveTo(mouse.x, 0); // LINE STARTS AT TOP...
+    context.lineTo(mouse.x, mouse.hooking ? mouse.y : canvas.height * 0.15); // LINE ENDS AT MOUSE OR WATER LINE...
+    context.stroke();
+
+    context.fillStyle = 'gray';
+    context.beginPath();
+    context.arc(mouse.x, mouse.y, 10, 0, Math.PI * 2);
+    context.fill();
+
+    // CHECK FOR COLLISIONS AND REMOVE FISH...
+
+    if (mouse.hooking)
+    {
+        for (let i = 0; i < fishes.length; i++)
+        {
+            const dx = fishes[i].x - mouse.x;
+            const dy = fishes[i].y - mouse.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+
+            if (distance < fishes[i].radius + 10) // 10 IS HOOK RADIUS...
+            {
+                score++;
+                scoreDisplay.textContent = score;
+                fishes.splice(i, 1); // REMOVE FISH FROM ARRAY...
+                i--; // ADJUST LOOP COUNTER...
+            }
+        }
+    }
+
+    gameFrame++;
+    requestAnimationFrame(animate);
+}
+
+// START THE GAME LOOP...
+
+animate();
