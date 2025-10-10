@@ -4,7 +4,7 @@
 
 **_The core components of the game will be:_**
 
-- **_HTML: The structure of the game, including the <canvas> element, a score display, and an instruction area._**
+- **_HTML: The structure of the game, including the ```<canvas>``` element, a score display, and an instruction area._**
 - **_CSS: The styling for the game's layout._**
 - **_JavaScript: The game logic, which handles drawing, player movement, fish AI, collision detection, and scoring._**
   
@@ -13,6 +13,6 @@
 - **_Initialize the Canvas: Get a reference to the <canvas> element and its 2D context._**
 - **_Handle User Input: Listen for mouse or keyboard events to control the fishing hook._**
 - **_Create Game Objects: Use JavaScript classes or objects to represent game elements like the player's hook and various types of fish._**
-- **_Create the Game Loop: Use requestAnimationFrame() to create a game loop that continuously clears the canvas, updates object positions, and redraws them._**
+- **_Create the Game Loop: Use ```requestAnimationFrame()``` to create a game loop that continuously clears the canvas, updates object positions, and redraws them._**
 - **_Implement Collision Detection: Write a function to check for collisions between the fishing hook and the fish._**
 - **_Manage Game State: Keep track of the score, game over conditions, and other game variables._**
