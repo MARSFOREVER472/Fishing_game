@@ -58,3 +58,20 @@ class Fish
         context.fill();
     }
 }
+
+// --- EVENT LISTENERS ---
+
+canvas.addEventListener('mousemove', function(e)
+{
+    mouse.x = e.clientX - canvas.getBoundingClientRect().left;
+});
+
+canvas.addEventListener('mousedown', function()
+{
+    mouse.hooking = true;
+});
+
+canvas.addEventListener('mouseup', function()
+{
+    mouse.hooking = false;
+});
