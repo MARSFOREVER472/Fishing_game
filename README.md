@@ -5,7 +5,9 @@
 **_The core components of the game will be:_**
 
 - **_HTML: The structure of the game, including the ```<canvas>``` element, a score display, and an instruction area._**
+  
 - **_CSS: The styling for the game's layout._**
+  
 - **_JavaScript: The game logic, which handles drawing, player movement, fish AI, collision detection, and scoring._**
   
 **_Basic game logic overview:_**
