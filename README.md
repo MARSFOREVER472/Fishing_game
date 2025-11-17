@@ -12,7 +12,7 @@
   
 **_Basic game logic overview:_**
 
-- **_Initialize the Canvas: Get a reference to the <canvas> element and its 2D context._**
+- **_Initialize the Canvas: Gets a reference to the <canvas> element and its 2D context._**
   
 - **_Handle User Input: Listen for mouse or keyboard events to control the fishing hook._**
   
